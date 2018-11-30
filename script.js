@@ -6,5 +6,17 @@ function getUrlParam(parameter, defaultvalue){
     return urlparameter;
 }
 
-var name1 = getUrlParam('text','None');
-console.log(name1);
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+$(document).ready(function(){
+    var name1 = getUrlParam('name1','None');
+    var name2 = getUrlParam('name2','None');
+    document.getElementById('name1').textContent = name1;
+    document.getElementById('name2').textContent = name2;
+});
