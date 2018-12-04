@@ -1,29 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900|PT+Mono');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html{
+    color: #080811;
+}
+
 body{
-    padding:0;
+    background: #f0f0f0;
+    color: #080811;
+    margin: 0 auto;
+    max-width:1000px;
+}
+
+section{
+    position:relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    min-height: 100vh;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.content{
+    background:#f0f0f0;
+    height: auto;
+    position:relative;
+    flex-grow: 1;
+    width: 50%;
+    height:80vw;
+    max-height:750px;
+}
+
+/* .content.right{
+    background:blue;
+}
+
+.content.left{
+    background:green;
+} */
+
+.box{
+    position:absolute;
+    background-color: white;
+    width: 80%;
+    height:90%;
+    top:5%;
+}
+
+.left .box{
+    left:15%;
+    background-image: linear-gradient(#807cfd, purple);
+}
+
+.right .box{
+    left:5%;
+    background-image: linear-gradient(red, yellow);
+}
+
+.title{
+    position:absolute;
+    font-size: 6vw;
     margin:0;
+    bottom:10%;
+    font-family: 'Merriweather';
+    text-transform: uppercase;
 }
 
-.card{
-    border:1px solid black;
-    display:flex;
-    flex-direction:row;
-    max-width: 750px;
-    margin:0 auto;
-    margin-top:20px;
-    justify-content: space-between;
+.left .title{
+    right:2.5%;
+    bottom: 10%;
 }
 
-.side1{
-
-    display:inline-block;
-    width:49%
+.right .title{
+    left:2.5%;
+    bottom: 8%;
 }
 
-.side1 h1{
+.story{
+    font-size: 0.9em;
+    font-family: 'PT Mono';
+    position:absolute;
+    width:60%;
+    bottom: 30%;
+    left:35%;
+    line-height:1.6;
+    color:white;
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: black;
+    padding: 7px 20px;
+
+}
+
+.left .story{
+    left:10%;
     text-align:right;
 }
 
-.side2{
-    display:inline-block;
-    width:49%;
+@media only screen and (max-width: 700px) {
+    section{
+        flex-direction:column;
+    }
+    .content{
+        width:100%;
+        height:80vh;
+    }
+    .title{
+        font-size: 12vw;
+    }
 }

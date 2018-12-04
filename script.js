@@ -15,8 +15,8 @@ function getUrlVars() {
 }
 
 $(document).ready(function(){
-    var name1 = getUrlParam('name1','None');
-    var name2 = getUrlParam('name2','None');
+    var name1 = getUrlParam('name1','Mazatl');
+    var name2 = getUrlParam('name2','Nochtli');
     document.getElementById('name1').textContent = name1;
     document.getElementById('name2').textContent = name2;
 });
