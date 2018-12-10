@@ -3,23 +3,28 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel='stylesheet' href="style.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="adaio.js"></script>
+    <script src="receive.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
     <header>
+        <a class="logo" href="#logo">Nahuatl Generator</a>
+        <a class="about" href="#cargo">About</a>
+        <a class="submit" href="story.html">Submit a story</a>
     </header>
     <section class="cards">
         <div class="left content">
-            <div class='box'></div>
+            <div class='box' id='left-box'></div>
             <h2 class="title" id="name1">Mazatl</h2>
-            <span class='story'>"Every thought, every word, and every action that adds to the positiove and the wholesome is a contribution to peace. Each and everyone of us is capable of making such a contribution"</span>
+            <span class='story' id="left-story">"Every thought, every word, and every action that adds to the positiove and the wholesome is a contribution to peace. Each and everyone of us is capable of making such a contribution"</span>
         </div>
         <div class="right content">
-            <div class='box'></div>
+            <div class='box' id='right-box'></div>
             <h2 class="title" id="name2">Nochtli</h2>
-            <span class='story'>"The meaning of life is just to be alive. It is so plain and so obvious and so simple. And yet, everybody rushes around in a great panic as if it were necessary to achieve something beyond themselves."</span>
+            <span class='story' id="right-story">"The meaning of life is just to be alive. It is so plain and so obvious and so simple. And yet, everybody rushes around in a great panic as if it were necessary to achieve something beyond themselves."</span>
         </div>
     </section>
 
